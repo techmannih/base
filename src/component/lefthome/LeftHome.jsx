@@ -18,7 +18,7 @@ function LeftHome() {
         <img
           src={image}
           alt="Illustration"
-          className="absolute bottom-[-2px] right-[-2px] md:w-[280px] h-auto max-md:w-[50px] max-md:h-auto"
+          className="absolute bottom-[-2px] right-[-2px]  md:w-[200px] lg:w-[250px] xl:w-[280px] h-auto"
         />
       </div>
     </div>
