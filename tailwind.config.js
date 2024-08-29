@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-dark': 'rgba(22, 22, 22, 1)', // Custom dark mode background color
+      },
+    },
   },
   plugins: [],
 }
