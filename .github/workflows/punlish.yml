@@ -5,12 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write   # This grants write access to the repository contents
-  id-token: write    # This grants access to the ID token for authentication
-  actions: write     # Write access to GitHub Actions workflows
-  # Add any other specific permissions you need
-
 jobs:
   publish:
     runs-on: ubuntu-latest
