@@ -5,24 +5,28 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write   # This grants write access to the repository contents
+  id-token: write    # This grants access to the ID token for authentication
+  actions: write     # Write access to GitHub Actions workflows
+  # Add any other specific permissions you need
+
 jobs:
   publish:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3  # Check out the repository
       - uses: actions/setup-node@v3
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - run: npm install -g pver
-      - run: npm ci
+      - run: npm install -g pver  # Install pver globally
+      - run: npm ci  # Install dependencies
 
-      # pver ko stage karna (commit aur push create karna)
-      - run: pver stage --git
+      - run: pver stage --git  # Stage the commit and push
 
-      # Release push karna (protected branch pe)
-      - run: pver release --git
+      - run: pver release --git  # Commit and push the release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}           # GitHub token for authentication
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Ensure the GH_TOKEN has write access
