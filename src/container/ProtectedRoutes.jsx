@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Navigate,Routes } from 'react-router-dom';
-import { useAuth } from '../auth/authcontext'; // Update path as necessary
+import { useAuth } from '../auth/authcontext';
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   const { user, loading } = useAuth();

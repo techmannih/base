@@ -33,7 +33,7 @@ function App() {
             {darkMode ? (
               <MoonIcon
                 className={`w-6 h-6 text-gray-400  ${
-                  darkMode ? "bg-black text-white" : " text-gray-400"
+                  darkMode ? "bg-black text-white" : " text-gray-400 bg-white"
                 }`}
               />
             ) : (
@@ -58,8 +58,8 @@ function App() {
               <SunIcon className="w-6 h-6 text-gray-400" />
             ) : (
               <MoonIcon
-                className={`w-6 h-6 text-gray-400  ${
-                  darkMode ? "bg-black text-white" : " text-gray-400"
+                className={`w- h- text-gray-400 p-1 rounded-full  ${
+                  darkMode ? "bg-black  text-white" : " text-gray-400"
                 }`}
               />
             )}
