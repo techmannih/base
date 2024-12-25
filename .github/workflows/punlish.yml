@@ -25,5 +25,4 @@ jobs:
       # Release push karna (protected branch pe)
       - run: pver release --git
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   # npm token for authentication
           GH_TOKEN: ${{ secrets.GH_TOKEN }}           # GitHub token for authentication
